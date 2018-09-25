@@ -8,25 +8,32 @@ function windowAdjust(){
     console.log(altura, largura)
 }
 
-windowAdjust()
 
+function logicaGame(){    
+    //remover o mosquito anterior (se existir)   
+    if(document.querySelector('#mosca')) { 
+document.querySelector('#mosca').remove()
+}
 let posicaoX = Math.floor(Math.random() * largura) -90;
 let posicaoY = Math.floor(Math.random() * altura) -90;
-
 posicaoX = posicaoX < 0 ? 0 : posicaoX
 posicaoY = posicaoY < 0 ? 0 : posicaoY
-
 console.log(posicaoX, posicaoY)
-
 let mosca = document.createElement('img');
 mosca.src = 'imagens/mosca.png'
 mosca.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
 mosca.style.left = posicaoX + 'px'
 mosca.style.top = posicaoY + 'px'
 mosca.style.position = 'absolute'
+mosca.id = 'mosca'
 document.body.appendChild(mosca)
 
+ }
 
+ windowAdjust()
+setInterval(function() {
+    logicaGame()
+ }, 1000)
 function tamanhoAleatorio(){
     let classe = Math.floor(Math.random() * 3)
     console.log(classe)
