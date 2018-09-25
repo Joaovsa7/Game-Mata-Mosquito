@@ -3,6 +3,7 @@ let largura = 0
 let altura = 0 
 
 function windowAdjust(){
+
     altura = window.innerHeight
     largura = window.innerWidth
     console.log(altura, largura)
