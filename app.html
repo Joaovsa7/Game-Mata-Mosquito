@@ -9,14 +9,30 @@
     <script defer src="script.js"></script>
 </head>
 <body onresize="windowAdjust()"> 
+
+        <div id="modalV" class="modal">
+                <div class="modal-content">
+                  <p>Você venceu! Parabéns!</p>
+                  <button id="btnVitoria"> Reiniciair</button>
+                </div>
+              
+              </div>
+
+<div id="meuModal" class="modal">
+  <div class="modal-content">
+    <p>Você perdeu :(</p>
+    <button id="btnDerrota"> Reiniciar </button>
+  </div>
+
+</div>
     <div class="painel">
 
         <div class="vidas">
-                <img src="imagens/coracao_vazio.png" alt="">
-                <img src="imagens/coracao_vazio.png" alt="">
-                <img src="imagens/coracao_vazio.png" alt="">
+                <img id="v1"src="imagens/coracao_cheio.png" alt="">
+                <img id="v2"src="imagens/coracao_cheio.png" alt="">
+                <img id="v3" src="imagens/coracao_cheio.png" alt="">
             </div>
-<div class="cronometro">Tempo Restante: ?</div>
+<div class="cronometro">Tempo Restante: <span id="cronometro"> </span></div>
     </div>
     
 </body>
